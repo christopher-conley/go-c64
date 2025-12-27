@@ -22,6 +22,11 @@ jobs:
       with:
         go-version: '1.20'
 
+    - name: prereq
+      run: |
+        go mod init github.com/allender/go-c64
+        go mod tidy
+
     - name: Build
       run: go build -v
 
